@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #283618;
+    margin: 0;
+    padding: clamp(12px, 5vw, 70px);
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+header {
+    background-color: #fefae0;
+    color: #283618;
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-small;
+    padding: 10px;
+}
+
+.hero-title {
+    margin-top: auto;
+    padding: 30px 15px 45px;
+}
+
+.hero-title h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 5vw, 65px);
+    font-weight: 700;
+    letter-spacing: clamp(1px, 0.3vw, 4px);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#upper {
+    background-image: url(./img/cocktails.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: clamp(400px, 65vw, 750px);
+    display: flex;
+    flex-direction: column;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 97%,
+        98% 98%,
+        96% 97%,
+        94% 98%,
+        92% 97%,
+        90% 98%,
+        88% 97%,
+        86% 98%,
+        84% 97%,
+        82% 98%,
+        80% 97%,
+        78% 98%,
+        76% 97%,
+        74% 98%,
+        72% 97%,
+        70% 98%,
+        68% 97%,
+        66% 98%,
+        64% 97%,
+        62% 98%,
+        60% 97%,
+        58% 98%,
+        56% 97%,
+        54% 98%,
+        52% 97%,
+        50% 98%,
+        48% 97%,
+        46% 98%,
+        44% 97%,
+        42% 98%,
+        40% 97%,
+        38% 98%,
+        36% 97%,
+        34% 98%,
+        32% 97%,
+        30% 98%,
+        28% 97%,
+        26% 98%,
+        24% 97%,
+        22% 98%,
+        20% 97%,
+        18% 98%,
+        16% 97%,
+        14% 98%,
+        12% 97%,
+        10% 98%,
+        8% 97%,
+        6% 98%,
+        4% 97%,
+        2% 98%,
+        0 97%
+    );
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    color: white;
+    gap: 15px;
+}
+
+#menu .left {
+    display: flex;
+    flex: 1;
+    gap: clamp(8px, 2vw, 25px);
+    font-size: clamp(7px, 0.8vw, 11px);
+    font-weight: bold;
+}
+
+#menu .center {
+    flex: 1;
+    text-align: center;
+    font-size: clamp(17px, 2vw, 26px);
+    margin: 0;
+}
+
+#menu .right {
+    flex: 1;
+    text-align: right;
+    font-size: clamp(7px, 0.8vw, 11px);
+    font-weight: bold;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#main {
+    width: 100%;
+    background-color: #fefae0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(25px, 5vw, 70px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(25px, 5vw, 55px);
+}
+
+#main img {
+    flex: 1 1 45%;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text {
+    flex: 1 1 45%;
+    max-width: 520px;
+    text-align: center;
+    color: #283618;
+}
+
+.about-text h2 {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.about-text p {
+    font-size: clamp(11px, 1vw, 14px);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-text button {
+    color: #283618;
+    border: 1px solid #283618;
+    background-color: transparent;
+    padding: 12px 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about-text button:hover {
+    background-color: #283618;
+    color: #fefae0;
+}
+
+#lower {
+    background-color: #fefae0;
+    padding: clamp(40px, 6vw, 80px) clamp(15px, 4vw, 50px);
+    text-align: center;
+}
+
+#lower > h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    color: #283618;
+    margin: 0 0 45px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(20px, 3vw, 40px);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fefae0;
+    border: 1px solid #d9d4bd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(40, 54, 24, 0.10);
+}
+
+.experience-card img {
+    width: clamp(55px, 6vw, 85px);
+    height: clamp(55px, 6vw, 85px);
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.experience-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(21px, 2.2vw, 29px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #283618;
+    margin: 0 0 15px;
+}
+
+.experience-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12px, 1vw, 14px);
+    line-height: 1.8;
+    color: #60664f;
+    margin: 0;
+}
+
+#menu a {
+    transition: opacity 0.3s ease;
+}
+
+#menu a:hover {
+    opacity: 0.65;
+}
+
+/* TABLET */
+@media screen and (max-width: 900px) {
+
+    #main {
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    #main img {
+        max-width: 45%;
+    }
+
+    .about-text h2 {
+        font-size: 25px;
+    }
+
+    #menu {
+        padding: 12px 15px;
+    }
+}
+
+
+/* SMARTPHONE */
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    header {
+        font-size: 9px;
+        padding: 9px;
+    }
+
+    #upper {
+        min-height: 480px;
+        background-position: center;
+    }
+
+    #menu {
+        padding: 12px 10px;
+        gap: 8px;
+    }
+
+    #menu .left {
+        gap: 8px;
+        font-size: 7px;
+    }
+
+    #menu .center {
+        font-size: 16px;
+    }
+
+    #menu .right {
+        font-size: 7px;
+        padding: 0;
+    }
+
+    .hero-title {
+        padding-bottom: 45px;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(24px, 7vw, 36px);
+        letter-spacing: 1px;
+    }
+
+    #main {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 15px;
+        gap: 25px;
+    }
+
+    #main img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-text h2 {
+        font-size: 27px;
+    }
+
+    .about-text p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+}
+
+
+/* SMARTPHONE PICCOLI */
+@media screen and (max-width: 380px) {
+
+    #menu .left {
+        gap: 5px;
+        font-size: 6px;
+    }
+
+    #menu .center {
+        font-size: 14px;
+    }
+
+    #menu .right {
+        font-size: 6px;
+    }
+
+    .hero-title h1 {
+        font-size: 24px;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 900px) {
+
+    .experience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .experience-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 450px;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+
+/* SMARTPHONE */
+@media screen and (max-width: 600px) {
+
+    #lower {
+        padding: 40px 20px;
+    }
+
+    #lower > h2 {
+        margin-bottom: 30px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .experience-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .experience-card {
+        padding: 30px 20px;
+    }
+
+    .experience-card img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .experience-card h3 {
+        font-size: 25px;
+    }
+
+    .experience-card p {
+        font-size: 13px;
+        max-width: 300px;
+    }
+}
